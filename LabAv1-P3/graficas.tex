@@ -5,28 +5,52 @@
 \usepackage{amssymb, amsmath}
 \usetikzlibrary{decorations, arrows.meta}
 \usepackage{tikz-3dplot}
+\usepackage{tikz-3dplot-circleofsphere}
 
 \begin{document}
 \tdplotsetmaincoords{60}{140}
 \begin{tikzpicture}[scale=2,tdplot_main_coords]
   \coordinate (O) at (0,0,0);
-  \draw[gray] (0,0,0) -- (2,0,0);
   \draw[thick,-stealth] (0,0,0) -- (1,0,0) node[below]{$z$};
   \draw[thick,-stealth] (0,0,0) -- (0,1,0) node[right=-1]{$x$};
   \draw[thick,-stealth] (0,0,0) -- (0,0,1) node[above=-1]{$y$};
   \draw[thick,fill=white] (2.2,-1,-1) -- (2.2,-1,1) -- (2.2,1,1) -- (2.2,1,-1) -- cycle;
   \draw[gray,-stealth] (2.2,-1,0) -- (2.2,1,0);
   \draw[gray,-stealth] (2.2,0,-1) -- (2.2,0,1);
-  \draw[red,thick,-stealth] (2.2,0,0)--(2.2,0.5,0.866025);
+  \draw[red,thick,-stealth] (2.2,0,0)--(2.2,0.5,0.866025) node[left]{$\vec{E}$};
+  \draw[thick,red] plot[domain=2.2:4.4, samples=200]  (\x,{0.15*sin(8*pi*\x r)},{0.259808*sin(8*pi*\x r)});
   \draw[red,thick,-stealth] (2.2,0,0)--(2.2,-0.5,-0.866025);
   \draw[gray] (2.2,0,0) -- (4.4,0,0);
   \tdplotsetthetaplanecoords{90}
   \tdplotdrawarc[-stealth,tdplot_rotated_coords]{(0,0,-2.2)}{0.4}{90}{30}
     {anchor=south west}{\hspace{-1mm}$\alpha$};
-  \tdplotdrawarc[tdplot_rotated_coords,fill=gray!25!white]{(0,0,-4.4)}{1.0}{0}{360}{anchor=south west}{\hspace{-1mm}$\alpha$};
+  \tdplotdrawarc[tdplot_rotated_coords,thick,fill=gray!25!white]{(0,0,-4.4)}{1.0}{0}{360}{anchor=south west}{\hspace{-1mm}$\alpha$};
+  \draw[thick,red] plot[domain=4.4:6.6, samples=200]  (\x,{-0.075*sin(8*pi*\x r)},{0.1299038*sin(8*pi*\x r)});
   \draw[gray,-stealth] (4.4,-1,0) -- (4.4,1,0);
   \draw[gray,-stealth] (4.4,0,-1) -- (4.4,0,1);
-  \draw[black,thick,dashed] (4.4,-0.707107,0.707107) -- (4.4,0.707107,-0.707107);
+  \draw[black,thick,dashed] (4.4,-0.5,0.866025) -- (4.4,0.5,-0.866025);
+  \draw[blue,thick,-stealth] (4.4,0,0) -- (4.4,-0.5,0.866025) node[above]{$\hat{\epsilon}_P$};
+  \tdplotdrawarc[-stealth,tdplot_rotated_coords]{(0,0,-4.4)}{0.4}{90}{-30}
+    {anchor=south west}{\hspace{-1mm}$\theta$};
+  \draw[gray] (4.4,0,0) -- (6.6,0,0);
+  \draw[thick,fill=white] (6.6,-1,-1) -- (6.6,-1,1) -- (6.6,1,1) -- (6.6,1,-1) -- cycle;
+  \draw[gray,-stealth] (6.6,-1,0) -- (6.6,1,0);
+  \draw[gray,-stealth] (6.6,0,-1) -- (6.6,0,1);
+  \draw[red,thick,-stealth] (6.6,0,0)--(6.6,-0.25,0.4330127) node[above]{$(\vec{E}\cdot\hat{\epsilon}_P)\hat{\epsilon}_P$};
+  \draw[red,thick,-stealth] (6.6,0,0)--(6.6,0.25,-0.4330127);
+  \tdplotdrawarc[-stealth,tdplot_rotated_coords]{(0,0,-6.6)}{0.2}{90}{-30}
+    {anchor=south west}{\hspace{-1mm}$\theta$};
+  \draw[gray] (6.6,0,0) -- (8.8,0,0); 
+  \draw[thick,red] plot[domain=6.6:8.8, samples=200]  (\x,{-0.075*sin(8*pi*\x r)},{0.1299038*sin(8*pi*\x r)});
+   
+   \tdplotdrawarc[thick,tdplot_rotated_coords,fill=white]{(0,0,-8.8)}{1}{-37.5}{142.5}
+    {anchor=south west}{\hspace{-1mm}};
+    \draw[black,thick] (8.8,-0.608761,0.7933533)--(9.8,-0.608761,0.7933533);
+    \draw[black,thick] (8.8,0.608761,-0.7933533)--(9.8,0.608761,-0.7933533);
+    \tdplotdrawarc[thick,tdplot_rotated_coords,fill=white]{(0,0,-9.8)}{1}{0}{360}
+    {anchor=south west}{\hspace{-1mm}};
+    \node at (4.4,0,-1.25) {Polarizador};
+    \node at (9.8,0,-1.25) {Detector};
 \end{tikzpicture}
 \end{document}
 
