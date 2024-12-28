@@ -1,0 +1,32 @@
+\documentclass[border=5mm]{standalone}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{amssymb, amsmath}
+\usetikzlibrary{decorations, arrows.meta}
+\usepackage{tikz-3dplot}
+
+\begin{document}
+\tdplotsetmaincoords{60}{140}
+\begin{tikzpicture}[scale=2,tdplot_main_coords]
+  \coordinate (O) at (0,0,0);
+  \draw[gray] (0,0,0) -- (2,0,0);
+  \draw[thick,-stealth] (0,0,0) -- (1,0,0) node[below]{$z$};
+  \draw[thick,-stealth] (0,0,0) -- (0,1,0) node[right=-1]{$x$};
+  \draw[thick,-stealth] (0,0,0) -- (0,0,1) node[above=-1]{$y$};
+  \draw[thick,fill=white] (2.2,-1,-1) -- (2.2,-1,1) -- (2.2,1,1) -- (2.2,1,-1) -- cycle;
+  \draw[gray,-stealth] (2.2,-1,0) -- (2.2,1,0);
+  \draw[gray,-stealth] (2.2,0,-1) -- (2.2,0,1);
+  \draw[red,thick,-stealth] (2.2,0,0)--(2.2,0.5,0.866025);
+  \draw[red,thick,-stealth] (2.2,0,0)--(2.2,-0.5,-0.866025);
+  \draw[gray] (2.2,0,0) -- (4.4,0,0);
+  \tdplotsetthetaplanecoords{90}
+  \tdplotdrawarc[-stealth,tdplot_rotated_coords]{(0,0,-2.2)}{0.4}{90}{30}
+    {anchor=south west}{\hspace{-1mm}$\alpha$};
+  \tdplotdrawarc[tdplot_rotated_coords,fill=gray!25!white]{(0,0,-4.4)}{1.0}{0}{360}{anchor=south west}{\hspace{-1mm}$\alpha$};
+  \draw[gray,-stealth] (4.4,-1,0) -- (4.4,1,0);
+  \draw[gray,-stealth] (4.4,0,-1) -- (4.4,0,1);
+  \draw[black,thick,dashed] (4.4,-0.707107,0.707107) -- (4.4,0.707107,-0.707107);
+\end{tikzpicture}
+\end{document}
+
