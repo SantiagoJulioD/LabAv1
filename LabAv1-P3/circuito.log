@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2024.4.9)  28 DEC 2024 20:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2024.4.9)  3 MAR 2025 13:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -635,9 +635,9 @@ nslations-basic-dictionary')
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 188.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 195.
+(Font)              <7> on input line 194.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 195.
+(Font)              <5> on input line 194.
  [1
 
 {C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (circuito.au
@@ -648,21 +648,18 @@ L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 34292 strings out of 475248
- 912162 string characters out of 5757814
- 1933801 words of memory out of 5000000
- 55507 multiletter control sequences out of 15000+600000
- 558667 words of font info for 38 fonts, out of 8000000 for 9000
+ 34327 strings out of 475248
+ 914165 string characters out of 5757814
+ 1926801 words of memory out of 5000000
+ 55544 multiletter control sequences out of 15000+600000
+ 558069 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,7n,121p,413b,961s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,7n,121p,413b,777s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmmi7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr9.pfb>
-Output written on circuito.pdf (1 page, 50251 bytes).
+cmr10.pfb>
+Output written on circuito.pdf (1 page, 13239 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
+ 14 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
